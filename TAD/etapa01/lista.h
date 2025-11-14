@@ -1,4 +1,4 @@
-
+//assinaturas das funções 
 #include <stdbool.h>
 #include <stdio.h>
 
