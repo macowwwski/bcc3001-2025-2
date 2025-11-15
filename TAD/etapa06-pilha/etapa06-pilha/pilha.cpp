@@ -58,24 +58,26 @@ public:
             return false;
         } else {
             No* aux = this->topo;
-        }
-        if (this->topo->ant != nullptr) {
-            this->topo = this->topo->ant;
-            this->topo->prox = nullptr;
-        } else {
-            this->topo = nullptr;
-        }
 
-        delete aux;
-        this->qtde--;
+            if (this->topo->ant != nullptr) {
+                this->topo = this->topo->ant;
+                this->topo->prox = nullptr;
+            } else {
+                this->topo = nullptr;
+            }
 
-        return true;
-    }
+            delete aux;
+            this->qtde--;
+
+            return true;
+        }
+}
+
 
 
     int peek(){
         if (this->qtde == 0){
-            cout >> "Pilha vazia" <<;
+            cout << "Pilha vazia";
             return -999;
         } else {
             return this->topo->dado;
@@ -91,4 +93,4 @@ public:
         }
         cout << "]"<< endl;
     }
-}
+};
